@@ -47,9 +47,9 @@ function Navbar(): JSX.Element {
             </Typography>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "row" }}>
-            <NavLink path="/" label="Om SFB"></NavLink>
-            <NavLink path="/explore" label="Utforska"></NavLink>
-            <NavLink path="/add" label="Lägg till"></NavLink>
+            <NavLink path="" label="Om SFB"></NavLink>
+            <NavLink path="explore" label="Utforska"></NavLink>
+            <NavLink path="add" label="Lägg till"></NavLink>
           </Box>
         </Box>
       </Toolbar>
