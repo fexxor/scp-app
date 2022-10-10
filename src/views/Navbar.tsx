@@ -1,6 +1,6 @@
 import React from "react";
 
-import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Hidden } from "@mui/material";
 import { Link, useLocation } from "react-router-dom";
 
 function Navbar(): JSX.Element {
@@ -43,9 +43,11 @@ function Navbar(): JSX.Element {
           >
             <Typography variant="h6">SFB</Typography>{" "}
             {/* TODO: Hide this if small screen */}
-            <Typography variant="subtitle2" marginLeft=".5rem">
-              Säkra, Förvara, Beskydda
-            </Typography>
+            <Hidden smDown>
+              <Typography variant="subtitle2" marginLeft=".5rem">
+                Säkra, Förvara, Beskydda
+              </Typography>
+            </Hidden>
           </Box>
           <Box sx={{ display: "flex", flexDirection: "row" }}>
             <NavLink path="/" label="Om SFB"></NavLink>
