@@ -2,7 +2,7 @@
   "name": "scp-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://fexxor.github.io/scp",
+  "homepage": "https://fexxor.github.io/scp-app",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
