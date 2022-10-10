@@ -28,9 +28,9 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<ExploreScpEntries />}></Route>
+        <Route path="/" element={<AboutScp />}></Route>
+        <Route path="/explore" element={<ExploreScpEntries />}></Route>
         <Route path="/add" element={<AddScp />}></Route>
-        <Route path="/about" element={<AboutScp />}></Route>
         <Route
           path="*"
           element={

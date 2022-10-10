@@ -5,7 +5,12 @@ import React from "react";
 class AboutScp extends React.Component {
   render = () => {
     return (
-      <Container sx={{ marginTop: "2rem", marginBottom: "1rem" }}>
+      <Container
+        sx={{
+          marginTop: "2rem",
+          marginBottom: "1rem",
+        }}
+      >
         <Grid container sx={{ justifyContent: "center" }}>
           <Grid item xs={12} md={8} lg={8}>
             <Card variant="outlined" sx={{ padding: "2rem" }}>

@@ -119,7 +119,7 @@ class ScpForm extends React.Component<ScpFormProps, ScpFormState> {
                 {/* TODO: Restrict to only be numerical */}
                 <TextField
                   fullWidth
-                  label="SCP-nummer"
+                  label="SFB-nummer"
                   variant="outlined"
                   onChange={this.handleScpNumberChange}
                   value={this.state.scpNumber || ""}
