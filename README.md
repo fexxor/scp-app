@@ -1,8 +1,16 @@
-# Getting Started with Create React App
+# SCP App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple app for reading and posting entries about the creepy pasta known as [SCP](https://en.wikipedia.org/wiki/SCP_Foundation), but in Swedish.
 
-## Available Scripts
+The app uses [CrudCrud](https://crudcrud.com/) as the current backend. This comes with some limitations. The api key is only valid for 24 hours, and only 100 calls can be made per key.
+
+In order to make testing the app smoother, a new key is fetched each time the user visits the app or refreshes the page. This means that no users will be able to see each others entries.
+
+As of now, some test data is submitted att initialization of the app, so that it's possible to get a feel for how it works with multiple entries more easily.
+
+## Development
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and uses the [Material UI](https://mui.com/) library for view components.
 
 In the project directory, you can run:
 
