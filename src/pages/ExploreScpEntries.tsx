@@ -205,7 +205,7 @@ class ExploreScpEntries extends React.Component<{}, ExploreScpEntriesState> {
 
   // TODO: The removal should be communicated to the user in a better way.
   private handleDeleteClicked = (scpId: string) => {
-    Api.deleteScpEntry(scpId).then((result) => {
+    Api.deleteScpEntry(scpId).then(() => {
       if (this.state.tag === "Loaded") {
         this.setState({
           tag: "Loaded",

@@ -1,8 +1,7 @@
 import { Box, Button, Card, Grid, TextField, Typography } from "@mui/material";
-import { Container } from "@mui/system";
 import React, { ChangeEventHandler } from "react";
-import { ScpEntry } from "../types/ScpEntry";
 import * as Api from "../Api";
+import { ScpEntry } from "../types/ScpEntry";
 
 export type FormType =
   | { tag: "UpdateExistingEntry"; entry: ScpEntry }
