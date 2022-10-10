@@ -60,7 +60,6 @@ class ExploreScpEntries extends React.Component<{}, ExploreScpEntriesState> {
   private renderScpEntries = (
     scpEntries: ExploreScpEntriesState
   ): JSX.Element => {
-    console.log(scpEntries);
     switch (scpEntries.tag) {
       case "NotRequested":
         return <div>hej</div>;
@@ -120,7 +119,7 @@ class ExploreScpEntries extends React.Component<{}, ExploreScpEntriesState> {
           <Grid item xs={12}>
             <ScpForm
               formType={{ tag: "UpdateExistingEntry", entry: entry }}
-              onSubmitSuccessful={() => this.foo(entry._id || "TODO")}
+              onSubmitSuccessful={this.resetEditing}
             />
           </Grid>
         </React.Fragment>
@@ -153,13 +152,15 @@ class ExploreScpEntries extends React.Component<{}, ExploreScpEntriesState> {
               <CardActions>
                 <Button
                   size="small"
-                  onClick={() => this.handleEditClicked(entry._id || "TODO")}
+                  // TODO: If we dont have the entry id, we should not be inside this code path. Should be solved with a better state model.
+                  onClick={() => this.handleEditClicked(entry._id || "")}
                 >
                   Redigera
                 </Button>
                 <Button
                   size="small"
-                  onClick={() => this.handleDeleteClicked(entry._id || "TODO")}
+                  // TODO: If we dont have the entry id, we should not be inside this code path. Should be solved with a better state model.
+                  onClick={() => this.handleDeleteClicked(entry._id || "")}
                 >
                   Ta bort
                 </Button>
@@ -171,14 +172,14 @@ class ExploreScpEntries extends React.Component<{}, ExploreScpEntriesState> {
     }
   };
 
-  private foo = (scpId: string) => {
+  private resetEditing = (scpEntry: ScpEntry) => {
     if (this.state.tag === "Loaded") {
       this.setState({
         tag: "Loaded",
         entries: this.state.entries.map((e) =>
-          e.entry._id === scpId
+          e.entry._id === scpEntry._id
             ? {
-                entry: e.entry,
+                entry: scpEntry,
                 isBeingEdited: false,
               }
             : e

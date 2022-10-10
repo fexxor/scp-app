@@ -9,7 +9,7 @@ export type FormType =
 
 type ScpFormProps = {
   formType: FormType;
-  onSubmitSuccessful?: () => void;
+  onSubmitSuccessful?: (scpEntry: ScpEntry) => void;
 };
 
 type ScpFormState = {
@@ -83,7 +83,8 @@ class ScpForm extends React.Component<ScpFormProps, ScpFormState> {
           });
 
           if (this.props.onSubmitSuccessful) {
-            this.props.onSubmitSuccessful();
+            // If the update call responded with the actual entry, we could have used that here.
+            this.props.onSubmitSuccessful(validatedScp);
           }
         } else {
           this.setState({ submitStatus: "SubmitFailed" });
