@@ -2,10 +2,8 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-// TODO: Write tests
+// TODO: Write actual tests
 test("renders navbar links", () => {
   render(<App />);
-  expect(screen.getByText(/Utforska/i)).toBeInTheDocument();
-  expect(screen.getByText(/Lägg till/i)).toBeInTheDocument();
-  expect(screen.getByText(/Om SFB/i)).toBeInTheDocument();
+  expect(screen.getByText(/Säkra, Förvara, Beskydda/i)).toBeInTheDocument();
 });
