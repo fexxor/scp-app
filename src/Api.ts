@@ -134,7 +134,6 @@ export const getScpEntries = (): Promise<ApiResponse<ScpEntry[]>> => {
       // Trying to catch the error we get when the resource has not yet been defined in the backend.
       if (e == "TypeError: NetworkError when attempting to fetch resource.") {
         return { tag: "Failure", error: "NoEntriesFound" };
-        // Answering with testdata
       } else {
         return { tag: "Failure", error: "OtherError" };
       }
@@ -177,7 +176,7 @@ const testData: ScpEntry[] = [
     scpNumber: "066",
     name: "Eriks leksak",
     description:
-      "SFB-066 är en amorf massa av flätat garn och band som väger ungefär ett kilogram. Strängar av SFB-066 kan tas individuellt och manipuleras; när detta är gjort produceras en ton på den diatoniska skalan (C-D-E-F-G-A-B) av objektet.\n\nNär en uppsättning av sex eller fler toner produceras kommer SFB-066 att producera en godartad effekt av varierande karaktär och varaktighet.",
+      "SFB-066 är en amorfisk massa av flätat garn och band som väger ungefär ett kilogram. Strängar av SFB-066 kan tas individuellt och manipuleras; när detta är gjort produceras en ton på den diatoniska skalan (C-D-E-F-G-A-B) av objektet.\n\nNär en uppsättning av sex eller fler toner produceras kommer SFB-066 att producera en godartad effekt av varierande karaktär och varaktighet.",
   },
   {
     scpNumber: "1000",
