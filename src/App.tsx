@@ -25,7 +25,7 @@ function App() {
   );
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="scp-app">
       <Navbar />
       <Routes>
         <Route path="/" element={<AboutScp />}></Route>
